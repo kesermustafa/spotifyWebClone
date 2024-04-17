@@ -1,0 +1,13 @@
+{
+  "name": "spotifyclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --no-source-map --watch sass/style.scss css/style.css",
+    "sass:compress": "sass --no-source-map --watch sass/style.scss css/compress.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
