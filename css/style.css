@@ -28,9 +28,10 @@ aside figure nav a {
 
 main {
   width: 100%;
-  margin: 10px 10px 80px 10px;
+  margin: 10px;
   background: #242424;
   border-radius: 10px;
+  margin-bottom: 80px;
 }
 main header form {
   display: flex;
@@ -90,7 +91,7 @@ main header form .search-input i {
   position: absolute;
   cursor: pointer;
   right: 15px;
-  top: 12px;
+  top: 10px;
   z-index: 1000;
 }
 main header form ul {
@@ -102,22 +103,22 @@ main header form ul {
 }
 main header form ul :last-child {
   background-color: #1AB26B;
+  padding: 10px;
   border-radius: 10px;
-  padding: 10px 15px;
   color: black;
 }
 main header form ul :last-child:hover {
-  background-color: #28a857;
+  scale: 0.98;
+  background-color: #0e7133;
   color: white;
-  scale: 0.96;
 }
 main header form ul li {
+  white-space: nowrap;
   cursor: pointer;
   font-size: 15px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
   color: rgba(255, 255, 255, 0.781);
   transition: all 0.3s;
-  white-space: nowrap;
 }
 main header form ul li:hover {
   color: #fff;
@@ -134,14 +135,16 @@ main .songs .list {
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  justify-content: center;
 }
 main .songs .list .card {
-  width: 200px;
+  width: 220px;
   background: #121212;
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
   opacity: 0.7;
+  cursor: pointer;
   transition: all 0.3s;
 }
 main .songs .list .card h4 {
@@ -150,16 +153,19 @@ main .songs .list .card h4 {
 main .songs .list .card:hover {
   opacity: 1;
 }
-main .songs .list .card .figure img {
+main .songs .list .card:hover .play {
+  bottom: 20px;
+  opacity: 1;
+}
+main .songs .list .card figure {
+  position: relative;
+}
+main .songs .list .card figure img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-main .songs .list .card .figure:hover .play {
-  bottom: 20px;
-  opacity: 1;
-}
-main .songs .list .card .figure .play {
+main .songs .list .card figure .play {
   background: #1AB26B;
   width: 40px;
   height: 40px;
@@ -170,12 +176,12 @@ main .songs .list .card .figure .play {
   bottom: -20px;
   font-size: 20px;
   border-radius: 50%;
-  transition: all 0.3s;
+  transition: all 0.4s;
   opacity: 0;
 }
-main .songs .list .card .figure .play:hover {
+main .songs .list .card figure .play:hover {
   scale: 1.2;
-  background: #3fa163;
+  background: #16af4e;
 }
 
 .playing {
@@ -203,6 +209,7 @@ main .songs .list .card .figure .play:hover {
 .playing .info img {
   width: 90px;
   border-radius: 50%;
+  box-shadow: 0 0 10px #e6e2e2;
 }
 
 .animate {

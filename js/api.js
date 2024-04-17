@@ -1,3 +1,4 @@
+import {renderSongs} from "./ui.js";
 
 
 const url =
@@ -15,6 +16,8 @@ export class API {
     constructor() {
         this.songs = [];
     }
+
+
     //* Popüler müzikleri getirir
     async getPopular() {
         const res = await fetch(url, options);
@@ -24,6 +27,8 @@ export class API {
         //* Ekrana popüler müzikleri aktaracak fonksiyona songs dizisini parametre olarak gönderdik
         renderSongs(this.songs);
     }
+
+
     //* Arama methodu
     async searchMusic(query) {
         const res = await fetch(
