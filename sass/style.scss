@@ -2,7 +2,9 @@
 
 @import 'variables';
 @import "mixin";
-
+@import "aside";
+@import "main";
+@import "playing";
 
 * {
   margin: 0;
@@ -13,9 +15,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   background: #121212;
   min-height: 100vh;
   color: $text;
   overflow-x: hidden;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: $text;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: $radius;
+    transition: all 0.3s;
+
+    &:hover {
+      background: $spotify-color;
+      color: black;
+    }
+  }
+
 }
+
+

@@ -1,4 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+aside {
+  padding: 20px 15px;
+  margin: 10px;
+  background: #242424;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+aside figure img {
+  max-width: 130px;
+  cursor: pointer;
+}
+aside figure .no-text {
+  width: 70px;
+}
+aside figure nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+aside figure nav a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  margin: 10px;
+  background: #242424;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+main header form {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #121212;
+  margin: 10px;
+  gap: 40px;
+  border-radius: 10px;
+}
+main header form #menu {
+  font-size: 25px;
+  display: none;
+}
+main header form .search-input {
+  position: relative;
+}
+main header form .search-input input {
+  background: black;
+  outline: none;
+  border: none;
+  max-width: 500px;
+  width: 500px;
+  padding: 15px 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+@media (max-width: 1000px) {
+  main header form .search-input input {
+    width: 250px;
+  }
+}
+@media (max-width: 850px) {
+  main header form .search-input input {
+    width: 300px;
+  }
+}
+@media (max-width: 800px) {
+  main header form .search-input input {
+    width: 275px;
+  }
+}
+@media (max-width: 670px) {
+  main header form .search-input input {
+    width: 250px;
+  }
+}
+@media (max-width: 570px) {
+  main header form .search-input input {
+    width: 200px;
+  }
+}
+main header form .search-input input:focus {
+  box-shadow: 0 0 10px rgb(56, 56, 56);
+}
+main header form .search-input i {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  top: 12px;
+  z-index: 1000;
+}
+main header form ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+main header form ul :last-child {
+  background-color: #45e680;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: black;
+}
+main header form ul :last-child:hover {
+  background-color: #28a857;
+  color: white;
+  scale: 0.96;
+}
+main header form ul li {
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.781);
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+main header form ul li:hover {
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,4 +138,17 @@ body {
   min-height: 100vh;
   color: rgba(255, 255, 255, 0.781);
   overflow-x: hidden;
+  display: flex;
+}
+body a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.781);
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+body a:hover {
+  background: #45e680;
+  color: black;
 }
