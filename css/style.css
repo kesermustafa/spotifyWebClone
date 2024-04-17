@@ -28,10 +28,9 @@ aside figure nav a {
 
 main {
   width: 100%;
-  margin: 10px;
+  margin: 10px 10px 80px 10px;
   background: #242424;
   border-radius: 10px;
-  margin-bottom: 80px;
 }
 main header form {
   display: flex;
@@ -102,7 +101,7 @@ main header form ul {
   gap: 40px;
 }
 main header form ul :last-child {
-  background-color: #45e680;
+  background-color: #1AB26B;
   border-radius: 10px;
   padding: 10px 15px;
   color: black;
@@ -123,7 +122,101 @@ main header form ul li {
 main header form ul li:hover {
   color: #fff;
 }
+main .songs h2 {
+  padding: 20px;
+  cursor: pointer;
+}
+main .songs h2:hover {
+  text-decoration: underline;
+}
+main .songs .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+main .songs .list .card {
+  width: 200px;
+  background: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+main .songs .list .card h4 {
+  margin-bottom: 6px;
+}
+main .songs .list .card:hover {
+  opacity: 1;
+}
+main .songs .list .card .figure img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+main .songs .list .card .figure:hover .play {
+  bottom: 20px;
+  opacity: 1;
+}
+main .songs .list .card .figure .play {
+  background: #1AB26B;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  opacity: 0;
+}
+main .songs .list .card .figure .play:hover {
+  scale: 1.2;
+  background: #3fa163;
+}
 
+.playing {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, black, #01703c);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 50px;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info p:nth-child(1) {
+  color: #d6eab5;
+  margin-bottom: 5px;
+}
+.playing .info img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.animate {
+  animation: turn 3s infinite linear;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -149,6 +242,6 @@ body a {
   transition: all 0.3s;
 }
 body a:hover {
-  background: #45e680;
+  background: #1AB26B;
   color: black;
 }
