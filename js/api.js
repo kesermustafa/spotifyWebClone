@@ -6,8 +6,8 @@ const url =
 const options = {
     method: "GET",
     headers: {
-        "X-RapidAPI-Key": "17bfa31bbbmsh1355592a7405f9bp1dd229jsnd7e87c1e1260",
-        "X-RapidAPI-Host": "shazam.p.rapidapi.com",
+        'X-RapidAPI-Key': '79d45e0097mshf79306e1e784a75p1035b1jsn4b953de36774',
+        'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
     },
 };
 
@@ -36,14 +36,14 @@ export class API {
             options
         );
         const data = await res.json();
-        console.log(data);
+
         // Veriyi istediğimiz hale çevirme
         // song.track yerine song'a erişme
         let newData = data.tracks.hits;
 
         newData = newData.map((song) => ({ ...song.track }));
         this.songs = newData;
-        console.log(this.songs);
+
         // aratılan şarkıları ekrana basma
         renderSongs(this.songs);
     }

@@ -16,7 +16,7 @@ const playMusic = (url) => {
     // audio elementinin müziği yüklemesini sağladık
     elements.audio.load();
     // audio elementinin müziği oynatmasını sağlar
-    elements.audio.play().then();
+    elements.audio.play();
 };
 
 //* Liste de tıklamalarda çalışır
