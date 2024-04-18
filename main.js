@@ -7,7 +7,7 @@ const api = new API();
 
 document.addEventListener('DOMContentLoaded',
   async () => await api.getPopular()
-)
+);
 
 
 const playMusic = (url) => {

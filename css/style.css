@@ -5,13 +5,26 @@ aside {
   background: #242424;
   border-radius: 10px;
   margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+aside figure .no-text {
+  display: none;
+}
+@media (max-width: 800px) {
+  aside figure .no-text {
+    display: block;
+    width: 50px;
+  }
 }
 aside figure img {
   max-width: 130px;
   cursor: pointer;
 }
-aside figure .no-text {
-  width: 70px;
+@media (max-width: 800px) {
+  aside figure img {
+    display: none;
+  }
 }
 aside figure nav {
   display: flex;
@@ -25,6 +38,16 @@ aside figure nav a {
   gap: 10px;
   align-items: center;
 }
+@media (max-width: 800px) {
+  aside figure nav a i {
+    font-size: 27px;
+  }
+}
+@media (max-width: 800px) {
+  aside figure nav a span {
+    display: none;
+  }
+}
 
 main {
   width: 100%;
@@ -36,6 +59,7 @@ main {
 main header form {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 30px;
   background: #121212;
   margin: 10px;
@@ -45,6 +69,11 @@ main header form {
 main header form #menu {
   font-size: 25px;
   display: none;
+}
+@media (max-width: 800px) {
+  main header form #menu {
+    display: block;
+  }
 }
 main header form .search-input {
   position: relative;
@@ -100,6 +129,11 @@ main header form ul {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+}
+@media (max-width: 800px) {
+  main header form ul {
+    display: none;
+  }
 }
 main header form ul :last-child {
   background-color: #1AB26B;
@@ -182,6 +216,18 @@ main .songs .list .card figure .play {
 main .songs .list .card figure .play:hover {
   scale: 1.2;
   background: #16af4e;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 22px;
+  z-index: 1000;
+  background: #121212;
+  top: 100px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .playing {

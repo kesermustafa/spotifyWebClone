@@ -4,15 +4,22 @@ aside {
   background: $card-background;
   border-radius: $radius;
   margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
   figure {
-
+    .no-text{
+      display: none;
+      @include ipad{
+        display: block;
+        width: 50px;
+      }
+    }
     img {
       max-width: 130px;
       cursor: pointer;
-    }
-
-    .no-text{
-      width: 70px;
+      @include ipad{
+        display: none;
+      }
     }
 
     nav {
@@ -26,6 +33,18 @@ aside {
         display: flex;
         gap: 10px;
         align-items: center;
+
+        i{
+          @include ipad{
+            font-size: 27px;
+          }
+        }
+
+        span{
+          @include ipad{
+            display: none;
+          }
+        }
       }
     }
   }

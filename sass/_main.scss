@@ -8,6 +8,7 @@ main{
     form{
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 15px 30px;
       background: $color;
       margin: 10px;
@@ -16,6 +17,10 @@ main{
       #menu{
         font-size: 25px;
         display: none;
+        @include ipad{
+          display: block;
+
+        }
       }
 
       .search-input{
@@ -62,6 +67,13 @@ main{
         align-items: center;
         justify-content: space-between;
         gap: 40px;
+
+        @include ipad{
+          display: none;
+        }
+
+
+
         :last-child{
           background-color: $spotify-color;
           padding: 10px;
@@ -155,4 +167,16 @@ main{
     }
 
   }
+}
+
+.toggle{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 22px;
+  z-index: 1000;
+  background: #121212;
+  top: 100px;
+  padding: 10px;
+  border-radius: $radius;
 }
